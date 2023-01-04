@@ -3,7 +3,7 @@ import { BannerContainer, Container, NavContainer, NavItem, NavItems } from './H
 const Header = () =>
   <Container>
     <BannerContainer>
-      <img src='/logo.webp'></img>
+      <img src="/logo.webp"></img>
       <span>Call Andrew: 0437 773 667</span>
     </BannerContainer>
     <NavContainer>

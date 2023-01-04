@@ -31,3 +31,8 @@ body {
 header:focus, main:focus {
   outline: none;
 }
+
+h1 {
+  text-decoration: underline var(--brand-orange);
+  color: black;
+}

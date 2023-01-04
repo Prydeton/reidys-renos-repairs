@@ -13,7 +13,7 @@ module.exports = {
     'process': true,
     'require': true
   },
-  'extends': ['eslint:recommended', 'plugin:react/recommended', 'plugin:storybook/recommended'],
+  'extends': ['eslint:recommended', 'plugin:react/recommended'],
   'parserOptions': {
     'ecmaFeatures': {
       'jsx': true

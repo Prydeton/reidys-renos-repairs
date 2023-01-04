@@ -1,7 +1,8 @@
 import { styled } from 'goober'
 
-export const Container = styled('div')`
+export const Container = styled('footer')`
   background-color: var(--brand-blue);
+  margin-top: auto;
   color: white;
   min-height: 70px;
   display: flex;
