@@ -1387,6 +1387,11 @@ loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lucide-react@^0.105.0-alpha.4:
+  version "0.105.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.105.0-alpha.4.tgz#9f9fa5a22973a071d63d65504866489d8050eaa7"
+  integrity sha512-QclWOzKYj7sDW33jTQK4enmxL1LmI2SHFqEEP56EWhvs4mmlbbFe6ALYcdcdGysNISNovEbH5WBHg8tN5DLn0w==
+
 magic-string@^0.26.7:
   version "0.26.7"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.26.7.tgz#caf7daf61b34e9982f8228c4527474dac8981d6f"
