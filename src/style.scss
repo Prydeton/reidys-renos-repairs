@@ -9,10 +9,18 @@ $brand-green: #C5D900;
   --brand-orange: #{$brand-orange};
   --brand-green: #{$brand-green};
   --text: #2D3135;
+  --body-font: 'Inter', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body {
   margin: 0;
+  font-family: var(--body-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text);
