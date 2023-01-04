@@ -1,0 +1,25 @@
+@use 'sass:color';
+
+$brand-blue: #021E62;
+$brand-orange: #EF7623;
+$brand-green: #C5D900;
+
+:root {
+  --brand-blue: #{$brand-blue};
+  --brand-orange: #{$brand-orange};
+  --brand-green: #{$brand-green};
+  --text: #2D3135;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+header:focus, main:focus {
+  outline: none;
+}

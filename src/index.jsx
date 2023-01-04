@@ -4,11 +4,12 @@ import { setup } from 'goober'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import * as Pages from './pages'
+import './style.scss'
 
 // Set up goober to use React
 setup(createElement)
 
-createRoot(document.getElementById('app')).render(
+createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Pages.Home />} />
