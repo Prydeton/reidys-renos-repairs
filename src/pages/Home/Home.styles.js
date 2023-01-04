@@ -71,3 +71,42 @@ export const ServicesContainer = styled('div')`
     gap: 3px
   }
 `
+
+export const TestimoniesWrapper = styled('div')`
+  width: 100%;
+  background-color: var(--brand-blue);
+  height: 100px;
+`
+
+export const AboutUsWrapper = styled('div')`
+  margin: 2em 3%;
+`
+
+export const AboutUsDetail = styled('div')`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7em;
+  margin: 2em 3%;
+
+  @media (max-width: 1620px) {
+    gap: 3%;
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-rows: 1.1fr min-content;
+    grid-template-columns: none;
+    gap: 1em;
+  }
+`
+
+export const AboutTickList = styled('div')`
+  
+`
+
+export const AboutImageContainer = styled('div')`
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+`

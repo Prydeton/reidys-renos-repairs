@@ -8,7 +8,7 @@ export const Container = styled('footer')`
   display: flex;
   justify-content: space-between;
   padding: 0 3em;
-
+  
   @media (max-width: 920px) {
     flex-direction: column;
     padding: 0;

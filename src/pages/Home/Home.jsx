@@ -1,6 +1,9 @@
-import { Button, ServiceTick } from '/src/components'
+import { Carousel } from 'react-responsive-carousel'
 
-import { IntroDetail, IntroImageContainer, IntroWrapper, Motto, MottoWrapper, ServicesContainer, Wrapper } from './Home.styles'
+import { Button, Testimony, TickListItem } from '/src/components'
+
+import { AboutImageContainer, AboutTickList, AboutUsDetail, AboutUsWrapper, IntroDetail, IntroImageContainer, IntroWrapper, Motto, MottoWrapper, ServicesContainer, TestimoniesWrapper, Wrapper } from './Home.styles'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const Home = () => <Wrapper>
   <MottoWrapper>
@@ -16,16 +19,16 @@ const Home = () => <Wrapper>
       <p>Our services include:</p>
       <ServicesContainer>
         <div>
-          <ServiceTick service="Painting" />
-          <ServiceTick service="Tiling" />
-          <ServiceTick service="Welding" />
-          <ServiceTick service="Plastering" />
+          <TickListItem text="Painting" />
+          <TickListItem text="Tiling" />
+          <TickListItem text="Welding" />
+          <TickListItem text="Plastering" />
         </div>
         <div>
-          <ServiceTick service="Paving" />
-          <ServiceTick service="Home Improvements" />
-          <ServiceTick service="Bathroom Renovations" />
-          <ServiceTick service="Kitchen  Renovations" />
+          <TickListItem text="Paving" />
+          <TickListItem text="Home Improvements" />
+          <TickListItem text="Bathroom Renovations" />
+          <TickListItem text="Kitchen  Renovations" />
         </div>
       </ServicesContainer>
       <p>Whether its a full bathroom renovation or a simple fly wire replacement, we'll get the job done.</p>
@@ -35,6 +38,33 @@ const Home = () => <Wrapper>
       <img src="/van.png"></img>
     </IntroImageContainer>
   </IntroWrapper>
+  <TestimoniesWrapper>
+    <Carousel infiniteLoop autoPlay showArrows={false} showIndicators={false} showStatus={false}>
+      <Testimony text="Excellent service! Found them to be reliable, prompt and clean. Would highly recommend their services." />
+      <Testimony text="Had a range-hood and flue installed with some timber panels to match the kitchen. Job done promptly. Looks great. Thanks." />
+      <Testimony text="You did an AMAZING job at Darwin's Peterpans Adventure Travel store! Professional, friendly and reliable service. Thanks!!." />
+      <Testimony text="As always, a great job done by Andrew!" />
+    </Carousel>
+  </TestimoniesWrapper>
+  <AboutUsWrapper>
+    <h1>About Us</h1>
+    <AboutUsDetail>
+      <div>
+        <p>A family owned and operated local business, Andrew and Vicci Reid noticed the lack of home improvement specialists that offered more skills than your typical handyman, without the expense of enlisting a building company. From this, Reidy’s Renos and Repairs was born.</p>
+        <p>From simple chores like hanging doors, to complete kitchen and bathroom renovations,  the Reidy’s has the skills you need and, because of our lower overheads, the lower prices than larger franchises</p>
+        <p>We specialise in home improvements, repairs, and renovations, but we can also oversee  building projects and coordinate any other tradesmen who are required such as plumbers or electricians.</p>
+        <p>Find out why Darwin and Palmerston locals prefer our personal and reliable service.</p>
+        <AboutTickList>
+          <TickListItem text="Trade Qualified" />
+          <TickListItem text="Waterproofing Certified" />
+          <TickListItem text="Fully Insured" />
+        </AboutTickList>
+      </div>
+      <AboutImageContainer>
+        <img src="/newspaper.png"></img>
+      </AboutImageContainer>
+    </AboutUsDetail>
+  </AboutUsWrapper>
 </Wrapper>
 
 

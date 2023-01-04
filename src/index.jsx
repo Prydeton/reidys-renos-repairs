@@ -8,6 +8,7 @@ import { setup } from 'goober'
 import { Footer, Header } from './components'
 import * as Pages from './pages'
 import './style.scss'
+
 // Set up goober to use React
 setup(createElement)
 
