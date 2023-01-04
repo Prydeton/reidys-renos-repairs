@@ -21,8 +21,10 @@ module.exports = {
     'ecmaVersion': 12,
     'sourceType': 'module'
   },
-  'plugins': ['react'],
+  'plugins': ['react', 'simple-import-sort'],
   'rules': {
+    'simple-import-sort/imports': 'error',
+    'comma-spacing': 'warn',
     'react/display-name': 'off',
     'react/prop-types': 'off',
     'react/no-unescaped-entities': 'off',
@@ -46,5 +48,22 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     'jsx-quotes': [1, 'prefer-double'],
     'space-infix-ops': 2
-  }
+  },
+  'overrides': [
+    {
+      'files': ['*.js', '*.jsx', '*.ts', '*.tsx'],
+      'rules': {
+        'simple-import-sort/imports': [
+          'error',
+          {
+            'groups': [
+              ['^react', '^@', '^[a-z]'],
+              ['^/src/'],
+              ['^./', '^.', '^../']
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
