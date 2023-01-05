@@ -120,7 +120,7 @@ const Contact = () => {
         <Button style={{ width: '200px' }} type="submit">{isLoading ? 'Sending...' : (isSuccessful ? 'Sent!' : 'Send')}</Button>
       </ContactForm>
     </ContactDetail>
-
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld8adEjAAAAALhpnN6IYGQTEmjXIZDwY9mR-qUG"></script>
   </ContactWrapper>
 }
 

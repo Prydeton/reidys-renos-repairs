@@ -19,3 +19,9 @@ export const PhotosContainer = styled('div')`
     align-items: center;
   }
 `
+
+export const GalleryHeader = styled('div')`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`

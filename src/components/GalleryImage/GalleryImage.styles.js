@@ -1,5 +1,10 @@
 import { styled } from 'goober'
 
 export const GalleryImageContainer = styled('div')`
-  flex: 1
+
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
 `
