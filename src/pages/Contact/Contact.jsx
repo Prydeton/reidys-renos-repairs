@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { TextareaAutosize, TextField } from '@mui/material'
+import { TextField } from '@mui/material'
 import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
 
 import { Button } from '/src/components'
@@ -10,6 +10,7 @@ import { ContactDetail, ContactForm, ContactMethod, ContactMethodsList, ContactW
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccessful, setIsSuccessful] = useState(false)
+  const [error, setError] = useState()
 
   const {
     handleSubmit,
@@ -19,7 +20,45 @@ const Contact = () => {
   } = useForm()
 
   const onSubmit = async values => {
-    console.log({values})
+    setIsLoading(true)
+    setError()
+    try {
+      // Definitely not a secret API key
+      const recaptcha_token = await grecaptcha?.execute('6Ld8adEjAAAAAFhxk6TNwKJIKFezBJoT-V6jmP_M', { action: 'submit' })
+
+      const res = await fetch('https://us-central1-reidysrenosrepairs.cloudfunctions.net/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...values,
+          recaptcha_token,
+        })
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        setIsSuccessful(true)
+        reset()
+      } else {
+        if (data.type === 'RECAPTCHA' || !data.error) {
+          // Fallback
+          window.open(`mailto:admin@reidysrenos.com.au?subject=${encodeURIComponent(
+            `Contact message from ${values.name}`
+          )}&body=${encodeURIComponent(
+            `Email: ${values.email}\n`
+            + `Phone Number: ${values.phone}\n`
+            + `Message:\n${values.message}`
+          )}`, '_blank')
+        } else {
+          setError(data.error)
+        }
+      }
+    } catch (e) {
+      setError(e?.message || e.toString())
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return <ContactWrapper>
@@ -53,17 +92,20 @@ const Contact = () => {
             required
             id="name"
             label="Name"
+            {...register('name', { required: 'Name is required' })}
           />
           <TextField
             required
-            id="name"
-            label="Name"
+            id="phone"
+            label="Phone Number"
+            {...register('phone', { required: 'Phone number is required' })}
           />
         </div>
         <TextField
           required
           id="email"
           label="Email"
+          {...register('email', { required: 'Email is required' })}
         />
         <TextField
           required
@@ -71,8 +113,10 @@ const Contact = () => {
           rows={8}
           id="message"
           label="Message"
+          {...register('message', { required: 'Message is required' })}
         />
-        <Button style={{ width: '200px' }} type="submit">Send</Button>
+        {error}
+        <Button style={{ width: '200px' }} type="submit">{isLoading ? 'Sending...' : (isSuccessful ? 'Sent!' : 'Send')}</Button>
       </ContactForm>
     </ContactDetail>
 

@@ -1,6 +1,7 @@
 import { createElement } from 'react'
 import { createRoot } from 'react-dom'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import * as dotenv from 'dotenv'
 import { getAnalytics } from 'firebase/analytics'
 import { initializeApp } from 'firebase/app'
 import { setup } from 'goober'

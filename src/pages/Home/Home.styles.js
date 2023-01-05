@@ -86,7 +86,6 @@ export const AboutUsDetail = styled('div')`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7em;
-  margin: 2em 3%;
 
   @media (max-width: 1620px) {
     gap: 3%;
