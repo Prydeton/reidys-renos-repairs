@@ -16,10 +16,11 @@ export const BannerContainer = styled('div')`
     height: 80px;
   }
 
-  span {
+  a {
     font-size: 2rem;
     color: var(--brand-blue);
     font-weight: bold;
+    text-decoration: none;
   }
 
   @media (max-width: 715px) {
@@ -31,7 +32,7 @@ export const BannerContainer = styled('div')`
       height: 120px;
     }
 
-    span {
+    a {
       font-size: 1.5rem;
     }
   }
