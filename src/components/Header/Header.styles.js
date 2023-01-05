@@ -64,8 +64,9 @@ export const NavItem = styled('a')`
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
+  text-decoration: none;
 
-  &:hover {
+  &.active, &:hover {
     color: var(--brand-orange);
   }
 

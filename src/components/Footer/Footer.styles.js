@@ -11,7 +11,7 @@ export const Container = styled('footer')`
   
   @media (max-width: 920px) {
     flex-direction: column;
-    padding: 0;
+    padding: 1em 0em;
   }
 `
 
