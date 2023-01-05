@@ -8,8 +8,9 @@ export const ContactWrapper = styled('div')`
     padding: 2em;
 
     @media (max-width: 1200px) {
-      border: 0;
-      padding: 0;
+      border-left: 0;
+      border-top: 1px solid var(--text);
+      padding: 1em 0px 0px 0px;
     }
   }
 `
@@ -19,7 +20,7 @@ export const ContactDetail = styled('div')`
   grid-template-columns: 1fr 1fr;
   gap: 7em;
   margin: 2em 0px;
-  
+
   @media (max-width: 1620px) {
     gap: 3%;
   }
@@ -32,6 +33,7 @@ export const ContactDetail = styled('div')`
 `
 
 export const ContactMethodsList = styled('div')`
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -48,6 +50,11 @@ export const ContactMethod = styled('a')`
   background: none;
   border: 0;
   -webkit-tap-highlight-color: transparent;
+  font-size: 1.2em;
+
+  @media (max-width: 1620px) {
+    font-size: 1em;
+  }
 `
 
 export const ContactForm = styled('form')`
