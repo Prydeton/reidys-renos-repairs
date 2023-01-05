@@ -8,9 +8,9 @@ const Header = () =>
     </BannerContainer>
     <NavContainer>
       <NavItems>
-        <NavItem>Home</NavItem>
-        <NavItem>Gallery</NavItem>
-        <NavItem>Contact</NavItem>
+        <NavItem href="/">Home</NavItem>
+        <NavItem href="/gallery">Gallery</NavItem>
+        <NavItem href="/contact">Contact</NavItem>
       </NavItems>
     </NavContainer>
   </Container>
