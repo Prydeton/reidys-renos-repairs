@@ -1,7 +1,6 @@
 import { createElement } from 'react'
 import { createRoot } from 'react-dom'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import * as dotenv from 'dotenv'
 import { getAnalytics } from 'firebase/analytics'
 import { initializeApp } from 'firebase/app'
 import { setup } from 'goober'
@@ -31,6 +30,7 @@ createRoot(document.getElementById('root')).render(
     <Header />
     <Routes>
       <Route path="/" element={<Pages.Home />} />
+      <Route path="/gallery" element={<Pages.Gallery /> } />
       <Route path="/contact" element={<Pages.Contact /> } />
       <Route path="*" element={<h1>404</h1>} />
     </Routes>

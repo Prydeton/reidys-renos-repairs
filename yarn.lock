@@ -2400,11 +2400,6 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
-dotenv@^16.0.3:
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
-  integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
-
 duplexer2@~0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer2/-/duplexer2-0.1.4.tgz#8b12dab878c0d69e3e7891051662a32fc6bddcc1"
@@ -5495,6 +5490,11 @@ re2@^1.15.8:
     install-artifact-from-github "^1.3.1"
     nan "^2.17.0"
     node-gyp "^9.3.0"
+
+react-before-after-slider-component@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/react-before-after-slider-component/-/react-before-after-slider-component-1.1.6.tgz#a21c07999a682225318fa6fe423180add9ff4183"
+  integrity sha512-T6MgeomX17ibpxdDcS4GyncUb8IiZPQr9yTt9+ay1m4J5P8AGwgqOnR28Y3bMdcnjg8kIo8bvffLG5vuIWQIcw==
 
 react-dom@^18.2.0:
   version "18.2.0"

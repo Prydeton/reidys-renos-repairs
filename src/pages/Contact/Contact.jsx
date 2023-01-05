@@ -24,7 +24,7 @@ const Contact = () => {
     setError()
     try {
       // Definitely not a secret API key
-      const recaptcha_token = await grecaptcha?.execute('6Ld8adEjAAAAAFhxk6TNwKJIKFezBJoT-V6jmP_M', { action: 'submit' })
+      const recaptcha_token = await grecaptcha?.execute('6Ld8adEjAAAAALhpnN6IYGQTEmjXIZDwY9mR-qUG', { action: 'submit' })
 
       const res = await fetch('https://us-central1-reidysrenosrepairs.cloudfunctions.net/sendEmail', {
         method: 'POST',
@@ -103,6 +103,7 @@ const Contact = () => {
         </div>
         <TextField
           required
+          type={'email'}
           id="email"
           label="Email"
           {...register('email', { required: 'Email is required' })}

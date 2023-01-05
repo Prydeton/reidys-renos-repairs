@@ -3,7 +3,6 @@ const sgMail = require('@sendgrid/mail')
 const escape = require('escape-html')
 const fetch = require('node-fetch')
 
-const TO_EMAIL = 'admin@reidysrenos.com.au'
 const SEND_GRID_KEY = process.env.SEND_GRID_KEY
 const RECAPTCHA_KEY = process.env.RECAPTCHA_SECRET_KEY
 
@@ -55,11 +54,11 @@ exports.sendEmail = functions.https.onRequest(async (req, res) => {
   // Send email
   try {
     await sgMail.send({
-      to: TO_EMAIL,
-      from: email,
+      to: 'admin@reidysrenos.com.au',
+      from: 'admin@reidysrenos.com.au',
       replyTo: email,
       subject: `Business inquiry from "${name}"`,
-      message: `Phone Number: ${phone}\n\n${message}`
+      text: `Phone Number: ${phone}\n\n${message}`
     }, true)
 
     res.json({ success: true })

@@ -32,14 +32,14 @@ const Home = () => <Wrapper>
         </div>
       </ServicesContainer>
       <p>Whether its a full bathroom renovation or a simple fly wire replacement, we'll get the job done.</p>
-      <Button>Get a free quote!</Button>
+      <Button href="/contact" style={{width: '200px' }}>Get a free quote!</Button>
     </IntroDetail>
     <IntroImageContainer>
       <img src="/van.png"></img>
     </IntroImageContainer>
   </IntroWrapper>
   <TestimoniesWrapper>
-    <Carousel infiniteLoop autoPlay showArrows={false} showIndicators={false} showStatus={false}>
+    <Carousel infiniteLoop autoPlay showArrows={false} showIndicators={false} showStatus={false} interval={3000}>
       <Testimony text="Excellent service! Found them to be reliable, prompt and clean. Would highly recommend their services." />
       <Testimony text="Had a range-hood and flue installed with some timber panels to match the kitchen. Job done promptly. Looks great. Thanks." />
       <Testimony text="You did an AMAZING job at Darwin's Peterpans Adventure Travel store! Professional, friendly and reliable service. Thanks!!." />
