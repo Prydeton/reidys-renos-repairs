@@ -4,7 +4,6 @@ export const Container = styled('footer')`
   background-color: var(--brand-blue);
   margin-top: auto;
   color: white;
-  min-height: 70px;
   display: flex;
   justify-content: space-between;
   padding: 0 3em;
@@ -12,6 +11,11 @@ export const Container = styled('footer')`
   @media (max-width: 920px) {
     flex-direction: column;
     padding: 1em 0em;
+  }
+
+  @media (max-width: 270px) {
+    flex-direction: row;
+    padding: 1em;
   }
 `
 
@@ -32,6 +36,7 @@ export const Item = styled('a')`
   span {
     text-align: center;
   }
+
   &:hover {
     color: var(--brand-orange);
   }
@@ -45,5 +50,11 @@ export const Item = styled('a')`
     flex-direction: row;
     height: 100%;
     padding: .7em;
+  }
+
+  @media (max-width: 270px) {
+    span {
+      display: none;
+    }
   }
 `

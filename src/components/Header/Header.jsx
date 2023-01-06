@@ -4,7 +4,7 @@ const Header = () =>
   <Container>
     <BannerContainer>
       <img src="/logo.webp"></img>
-      <a href="tel:0437773667">Call Andrew: 0437 773 667</a>
+      <a href="tel:0437773667"><p>Call Andrew: </p><p>0437 773 667</p></a>
     </BannerContainer>
     <NavContainer>
       <NavItems>

@@ -4,10 +4,13 @@ import { TextField } from '@mui/material'
 import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
 
 import { Button } from '/src/components'
+import { usePageTitle } from '/src/Hooks'
 
 import { ContactDetail, ContactForm, ContactMethod, ContactMethodsList, ContactWrapper } from './Contact.styles'
 
 const Contact = () => {
+  usePageTitle('Contact')
+
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccessful, setIsSuccessful] = useState(false)
   const [error, setError] = useState()
@@ -116,11 +119,10 @@ const Contact = () => {
           label="Message"
           {...register('message', { required: 'Message is required' })}
         />
-        {error}
-        <Button style={{ width: '200px' }} type="submit">{isLoading ? 'Sending...' : (isSuccessful ? 'Sent!' : 'Send')}</Button>
+        {error && 'Looks like our mail system is down, please give us a call on 0437 773 667'}
+        <Button style={{padding: '0.8em 3em'}} disabled={isSuccessful} type="submit">{isLoading ? 'Sending...' : (isSuccessful ? 'Sent!' : 'Send')}</Button>
       </ContactForm>
     </ContactDetail>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld8adEjAAAAALhpnN6IYGQTEmjXIZDwY9mR-qUG"></script>
   </ContactWrapper>
 }
 

@@ -15,4 +15,5 @@ export const StyledButton = styled('button')`
   border: none;
   cursor: pointer;
   text-decoration: none;
+  width: fit-content;
 `

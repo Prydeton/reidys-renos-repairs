@@ -26,6 +26,7 @@ body {
   color: var(--text);
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
+  max-width: 100%;
 }
 
 header:focus, main:focus {
@@ -35,4 +36,8 @@ header:focus, main:focus {
 h1 {
   text-decoration: underline var(--brand-orange);
   color: black;
+}
+
+.grecaptcha-badge { 
+  visibility: hidden;
 }

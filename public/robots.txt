@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /contact
+Allow: /gallery
+Allow: /

@@ -7,6 +7,10 @@ export const TestimonyContainer = styled('div')`
   height: 100px;
   width: 100%;
   padding: 1em;
+
+  @media (max-width: 430px) {
+    height: 150px;
+  }
 `
 
 export const TestimonyContent = styled('div')`

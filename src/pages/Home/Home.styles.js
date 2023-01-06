@@ -62,13 +62,18 @@ export const IntroImageContainer = styled('div')`
 `
 
 export const ServicesContainer = styled('div')`
-  display: flex;
-  gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  width: 500px;
 
-  &:div {
-    display: flex;
-    flex-direction: column;
-    gap: 3px
+  @media (max-width: 520px) {
+    width: fit-content;
+    column-gap: 1em;
+  }
+
+  @media (max-width: 335px) {
+    grid-template-columns: 1fr;
   }
 `
 
@@ -76,6 +81,10 @@ export const TestimoniesWrapper = styled('div')`
   width: 100%;
   background-color: var(--brand-blue);
   height: 100px;
+
+  @media (max-width: 430px) {
+    height: 150px;
+  }
 `
 
 export const AboutUsWrapper = styled('div')`
