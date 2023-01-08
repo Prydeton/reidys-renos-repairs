@@ -1,0 +1,43 @@
+@use 'sass:color';
+
+$brand-blue: #021E62;
+$brand-orange: #EF7623;
+$brand-green: #C5D900;
+
+:root {
+  --brand-blue: #{$brand-blue};
+  --brand-orange: #{$brand-orange};
+  --brand-green: #{$brand-green};
+  --text: #2D3135;
+  --body-font: 'Inter', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  max-width: 100%;
+}
+
+header:focus, main:focus {
+  outline: none;
+}
+
+h1 {
+  text-decoration: underline var(--brand-orange);
+  color: black;
+}
+
+.grecaptcha-badge { 
+  visibility: hidden;
+}
