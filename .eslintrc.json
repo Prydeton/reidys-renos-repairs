@@ -35,11 +35,6 @@
     "yoda": 2,
     "no-trailing-spaces": 1,
     "eol-last": [1, "always"],
-    "no-unused-vars": [1, {
-      "args": "all",
-      "argsIgnorePattern": "^_",
-      "ignoreRestSiblings": true
-    }],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],

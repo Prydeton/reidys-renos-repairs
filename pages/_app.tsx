@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="viewport-fit=cover" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <meta name="description" content="Reidy's Renos & Repairs in Darwin—more skilled than your average handyman, cheaper than a builder. Tick off your to-do list. Call Andrew: 0437 773 667." />
         <meta name="og:site_name" content="Reidy's Renos and Repairs" />
 

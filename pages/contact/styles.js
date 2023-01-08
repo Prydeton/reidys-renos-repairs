@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ContactWrapper = styled('div')`
+export const Wrapper = styled.div`
   margin: 2em 3% 0px 3%;
 
   form {
@@ -15,7 +15,7 @@ export const ContactWrapper = styled('div')`
   }
 `
 
-export const ContactDetail = styled('div')`
+export const ContactDetail = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7em;
@@ -32,14 +32,14 @@ export const ContactDetail = styled('div')`
   }
 `
 
-export const ContactMethodsList = styled('div')`
+export const ContactMethodsList = styled.div`
   margin-top: 3em;
   display: flex;
   flex-direction: column;
   gap: 1em;
 `
 
-export const ContactMethod = styled('a')`
+export const ContactMethod = styled.a`
   display: flex;
   gap: 1em;
   align-items: center;
@@ -57,7 +57,7 @@ export const ContactMethod = styled('a')`
   }
 `
 
-export const ContactForm = styled('form')`
+export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 2em;
