@@ -42,7 +42,7 @@ export default function Home() {
           </IntroImageContainer>
         </IntroWrapper>
         <TestimoniesWrapper>
-          <Carousel infiniteLoop autoPlay showArrows={false} showIndicators={false} showStatus={false} interval={3000}>
+          <Carousel showThumbs={false} infiniteLoop autoPlay showArrows={false} showIndicators={false} showStatus={false} interval={3000}>
             <Testimony text="Excellent service! Found them to be reliable, prompt and clean. Would highly recommend their services." />
             <Testimony text="Had a range-hood and flue installed with some timber panels to match the kitchen. Job done promptly. Looks great. Thanks." />
             <Testimony text="You did an AMAZING job at Darwin's Peterpans Adventure Travel store! Professional, friendly and reliable service. Thanks!!." />
