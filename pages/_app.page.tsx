@@ -14,7 +14,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <script src="https://www.google.com/recaptcha/api.js?render=6Ld8adEjAAAAALhpnN6IYGQTEmjXIZDwY9mR-qUG" async defer></script>
         <link rel="icon" href="/icon.webp" />
       </Head>
       <Layout>
