@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="icon" href="/icon.webp" />
+        <link rel="shortcut icon" href="/icon.webp" />
       </Head>
       <Layout>
         <Component {...pageProps} />
