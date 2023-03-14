@@ -1,4 +1,5 @@
 import { Layout } from '@components'
+import { Analytics } from '@vercel/analytics/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </>
   )
