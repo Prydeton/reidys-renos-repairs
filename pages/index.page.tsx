@@ -29,16 +29,14 @@ export default function Home() {
               <TickListItem text="Tiling" />
               <TickListItem text="Welding" />
               <TickListItem text="Plastering" />
-              <TickListItem text="Paving" />
+              <TickListItem text="Furniture Repairs" />
               <TickListItem text="Home Improvements" />
-              <TickListItem text="Bathroom Renovations" />
-              <TickListItem text="Kitchen  Renovations" />
             </ServicesContainer>
             <p>Whether its a full bathroom renovation or a simple fly wire replacement, we'll get the job done.</p>
             <Button href="/contact">Get a free quote!</Button>
           </IntroDetail>
           <IntroImageContainer>
-            <Image src="/van.webp" width={706} height={347} alt="White van with Reidy's Renos and Repairs branding" />
+            <Image src="/van.jpeg" width={711} height={391} alt="White van with Reidy's Renos and Repairs branding" />
           </IntroImageContainer>
         </IntroWrapper>
         <TestimoniesWrapper>
