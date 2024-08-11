@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface ContainerProps {
 	position: string;
@@ -16,8 +16,8 @@ export const Container = styled.div<ContainerProps>`
     user-select: none;
   }
 
-  --position: ${(p) => p.position}%;
-`;
+  --position: ${p => p.position}%;
+`
 
 export const ImageContainer = styled.div`
   aspect-ratio: 1/1;
@@ -36,7 +36,7 @@ export const ImageContainer = styled.div`
     inset: 0;
     clip-path: inset(0 calc(100% - var(--position)) 0 0);
   }
-`;
+`
 
 export const Slider = styled.input`
   position: absolute;
@@ -50,7 +50,7 @@ export const Slider = styled.input`
     outline: 5px solid black;
     outline-offset: 3px;
   }
-`;
+`
 
 export const SliderLine = styled.div`
   position: absolute;
@@ -61,7 +61,7 @@ export const SliderLine = styled.div`
   left: var(--position);
   transform: translateX(-50%);
   pointer-events: none;
-`;
+`
 
 export const SliderButton = styled.div`
   position: absolute;
@@ -76,4 +76,4 @@ export const SliderButton = styled.div`
   transform: translate(-50%, -50%);
   pointer-events: none;
   box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
-`;
+`

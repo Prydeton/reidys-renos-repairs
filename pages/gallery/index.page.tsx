@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react'
 import { DropdownSelect, ImageSlider } from '@components'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
 
 import { beforeAfterPhotos } from './galleryLibrary'
 import { GalleryHeader, PhotosContainer, Wrapper } from './styles'
