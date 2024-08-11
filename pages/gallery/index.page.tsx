@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
 import { DropdownSelect, ImageSlider } from '@components'
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 
 import { beforeAfterPhotos } from './galleryLibrary'
 import { GalleryHeader, PhotosContainer, Wrapper } from './styles'
@@ -21,11 +21,10 @@ const Gallery = () => {
       <Wrapper>
         <GalleryHeader>
           <h1>Gallery</h1>
-          <DropdownSelect options={['All', 'Kitchen', 'Bathroom', 'Repairs']} setState={setFilter} />
+          <DropdownSelect options={['All', 'Bathroom', 'Indoors', 'Outdoors']} setState={setFilter} />
         </GalleryHeader>
         <PhotosContainer>
-          {filteredPhotos.map((pair, index) => <ImageSlider key={index} firstImage={`/gallery/${pair.after}`} secondImage={`/gallery/${pair.before}`} />)}
-
+          {filteredPhotos.map((pair, index) => <ImageSlider key={index} firstImage={`/gallery/${pair.before}`} secondImage={`/gallery/${pair.after}`} />)}
         </PhotosContainer>
       </Wrapper>
     </>
