@@ -5,11 +5,6 @@ export const beforeAfterPhotos = [
     'before': 'beforeBathroom38.jpeg'
   },
   {
-    'category': 'Outdoors',
-    'before': 'beforeOutdoors2.jpeg',
-    'after': 'afterOutdoors2.jpeg'
-  },
-  {
     'category': 'Bathroom',
     'before': 'beforeBathroom23.jpeg',
     'after': 'afterBathroom23.jpeg'
@@ -46,43 +41,13 @@ export const beforeAfterPhotos = [
   },
   {
     'category': 'Bathroom',
-    'before': 'beforeBathroom3.jpeg',
-    'after': 'afterBathroom3.jpeg'
-  },
-  {
-    'category': 'Outdoors',
-    'after': 'afterOutdoors9.jpeg',
-    'before': 'beforeOutdoors9.jpeg'
-  },
-  {
-    'category': 'Bathroom',
     'after': 'afterBathroom10.jpeg',
     'before': 'beforeBathroom10.jpeg'
   },
   {
     'category': 'Bathroom',
-    'after': 'afterBathroom24.jpeg',
-    'before': 'beforeBathroom24.jpg'
-  },
-  {
-    'category': 'Outdoors',
-    'after': 'afterOutdoors1.jpeg',
-    'before': 'beforeOutdoors1.jpeg'
-  },
-  {
-    'category': 'Bathroom',
     'after': 'afterBathroom35.jpeg',
     'before': 'beforeBathroom35.jpeg'
-  },
-  {
-    'category': 'Bathroom',
-    'before': 'beforeBathroom34.jpeg',
-    'after': 'afterBathroom34.jpeg'
-  },
-  {
-    'category': 'Outdoors',
-    'after': 'afterOutdoors6.jpeg',
-    'before': 'beforeOutdoors6.jpeg'
   },
   {
     'category': 'Bathroom',
@@ -120,11 +85,6 @@ export const beforeAfterPhotos = [
     'after': 'afterBathroom37.jpeg'
   },
   {
-    'category': 'Bathroom',
-    'after': 'afterBathroom1.jpeg',
-    'before': 'beforeBathroom1.jpeg'
-  },
-  {
     'category': 'Outdoors',
     'after': 'afterOutdoors4.jpeg',
     'before': 'beforeOutdoors4.jpeg'
@@ -133,16 +93,6 @@ export const beforeAfterPhotos = [
     'category': 'Bathroom',
     'before': 'beforeBathroom5.jpeg',
     'after': 'afterBathroom5.jpeg'
-  },
-  {
-    'category': 'Outdoors',
-    'after': 'afterOutdoors10.jpeg',
-    'before': 'beforeOutdoors10.jpeg'
-  },
-  {
-    'category': 'Outdoors',
-    'after': 'afterOutdoors7.jpeg',
-    'before': 'beforeOutdoors7.jpeg'
   },
   {
     'category': 'Bathroom',
@@ -255,11 +205,6 @@ export const beforeAfterPhotos = [
     'after': 'afterBathroom2.jpeg'
   },
   {
-    'category': 'Bathroom',
-    'after': 'afterBathroom11.jpeg',
-    'before': 'beforeBathroom11.jpeg'
-  },
-  {
     'category': 'Indoors',
     'before': 'beforeIndoors5.jpeg',
     'after': 'afterIndoors5.jpeg'
@@ -268,11 +213,6 @@ export const beforeAfterPhotos = [
     'category': 'Bathroom',
     'after': 'afterBathroom31.jpeg',
     'before': 'beforeBathroom31.jpeg'
-  },
-  {
-    'category': 'Bathroom',
-    'after': 'afterBathroom30.jpeg',
-    'before': 'beforeBathroom30.jpg'
   },
   {
     'category': 'Outdoors',
