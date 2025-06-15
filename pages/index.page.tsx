@@ -32,7 +32,7 @@ export default function Home() {
               <TickListItem text="Furniture Repairs" />
               <TickListItem text="Home Improvements" />
             </ServicesContainer>
-            <p>Whether its a full bathroom renovation or a simple fly wire replacement, we'll get the job done.</p>
+            <p>From a simple fly wire replacement to custom solutions for tricky repairs, we bring quality craftsmanship and a creative approach to every job.</p>
             <Button href="/contact">Get a free quote!</Button>
           </IntroDetail>
           <IntroImageContainer>
@@ -52,7 +52,7 @@ export default function Home() {
           <AboutUsDetail>
             <div>
               <p>A family owned and operated local business, Andrew and Vicci Reid noticed the lack of home improvement specialists that offered more skills than your typical handyman, without the expense of enlisting a building company. From this, Reidy’s Renos and Repairs was born.</p>
-              <p>From simple chores like hanging doors, to complete kitchen and bathroom renovations,  the Reidy’s has the skills you need and, because of our lower overheads, the lower prices than larger franchises</p>
+              <p>From everyday tasks like hanging doors to those tricky home fixes that need a clever touch, we’ve got the skills to help — without the overhead or high prices of larger companies.</p>
               <p>We specialise in home improvements, repairs, and renovations, but we can also oversee  building projects and coordinate any other tradesmen who are required such as plumbers or electricians.</p>
               <p>Find out why Darwin and Palmerston locals prefer our personal and reliable service.</p>
               <AboutTickList>
