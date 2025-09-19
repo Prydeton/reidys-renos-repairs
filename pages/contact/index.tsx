@@ -5,9 +5,9 @@ import { TextField } from '@mui/material'
 import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
 import Head from 'next/head'
 import Script from 'next/script'
+import { ContactApiResponse } from 'types/contact'
 
 import { ContactDetail, ContactForm, ContactMethod, ContactMethodsList, Wrapper } from './styles'
-import { ContactApiResponse } from 'types/contact'
 
 declare let grecaptcha: any
 

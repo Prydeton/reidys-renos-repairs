@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+
 import type { ContactApiRequestBody, ContactApiResponse, RecaptchaVerification } from '../../types/contact'
 
 const isEmail = (val: string) => /.+@.+\..+/.test(val)
