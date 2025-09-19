@@ -4,8 +4,10 @@ import { Button } from '@components'
 import { TextField } from '@mui/material'
 import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
 import Head from 'next/head'
+import Script from 'next/script'
 
 import { ContactDetail, ContactForm, ContactMethod, ContactMethodsList, Wrapper } from './styles'
+import { ContactApiResponse } from 'types/contact'
 
 declare let grecaptcha: any
 
@@ -13,13 +15,14 @@ interface ContactFormProps {
   name: string,
   phone: string,
   email: string,
+  subject: string,
   message: string
 }
 
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState(false)
-  const [isSuccessful, setIsSuccessful] = useState(false)
-  const [error, setError] = useState()
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isSuccessful, setIsSuccessful] = useState<boolean>(false)
+  const [error, setError] = useState<string | undefined>()
 
   const {
     handleSubmit,
@@ -30,10 +33,9 @@ const Contact = () => {
   const onSubmit = async (values: ContactFormProps) => {
     setIsLoading(true)
     try {
-      // Definitely not a secret API key
       const recaptcha_token = await grecaptcha?.execute('6Ld8adEjAAAAALhpnN6IYGQTEmjXIZDwY9mR-qUG', { action: 'submit' })
 
-      const res = await fetch('https://us-central1-reidysrenosrepairs.cloudfunctions.net/sendEmail', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -42,27 +44,14 @@ const Contact = () => {
         })
       })
 
-      const data = await res.json()
+      const data: ContactApiResponse = await res.json()
 
       if (data.success) {
         setIsSuccessful(true)
         reset()
       } else {
-        if (data.type === 'RECAPTCHA' || !data.error) {
-          // Fallback
-          window.open(`mailto:admin@reidysrenos.com.au?subject=${encodeURIComponent(
-            `Contact message from ${values.name}`
-          )}&body=${encodeURIComponent(
-            `Email: ${values.email}\n`
-            + `Phone Number: ${values.phone}\n`
-            + `Message:\n${values.message}`
-          )}`, '_blank')
-        } else {
-          setError(data.error)
-        }
+        setError(data.error)
       }
-    } catch (e: any) {
-      console.log(e?.message || e.toString())
     } finally {
       setIsLoading(false)
     }
@@ -72,8 +61,14 @@ const Contact = () => {
     <>
       <Head>
         <title>Contact | Reidy's Renos & Repairs</title>
-        <script src="https://www.google.com/recaptcha/api.js?render=6Ld8adEjAAAAALhpnN6IYGQTEmjXIZDwY9mR-qUG&onload=onloadCallback" async defer></script>
       </Head>
+      <Script
+        src="https://www.google.com/recaptcha/api.js?render=6Ld8adEjAAAAALhpnN6IYGQTEmjXIZDwY9mR-qUG"
+        strategy="afterInteractive"
+        onLoad={() => {
+          try { grecaptcha?.ready?.(() => {/* ready */}) } catch (e) { /* ignore */ }
+        }}
+      />
       <Wrapper>
         <h1>Contact</h1>
         <ContactDetail>
@@ -123,14 +118,21 @@ const Contact = () => {
             />
             <TextField
               required
+              id="subject"
+              label="Subject"
+              maxLength={75}
+              {...register('subject', { required: 'Subject is required' })}
+            />
+            <TextField
+              required
               multiline
               rows={8}
               id="message"
               label="Message"
               {...register('message', { required: 'Message is required' })}
             />
-            {error && 'Looks like our mail system is down, please give us a call on 0437 773 667'}
-            <Button disabled={isSuccessful} type="submit">{isLoading ? 'Sending...' : (isSuccessful ? 'Sent!' : 'Send')}</Button>
+            {error && `${error} \n Please give us a call on 0437 773 667!`}
+            <Button disabled={isSuccessful} type="submit">{isLoading ? 'Sending...' : (isSuccessful ? 'Sent! We\'ll be in touch soon!' : 'Send')}</Button>
           </ContactForm>
         </ContactDetail>
       </Wrapper>

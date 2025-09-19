@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { ChevronsLeftRight } from 'lucide-react'
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import { Container, ImageContainer, Slider, SliderButton, SliderLine } from './ImageSlider.styles'
 
