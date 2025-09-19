@@ -34,7 +34,8 @@
     "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-simple-import-sort": "^8.0.0"
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "next-sitemap": "^4.2.3"
   },
   "resolutions": {
     "styled-components": "^5"
