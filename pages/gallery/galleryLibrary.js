@@ -30,11 +30,6 @@ export const beforeAfterPhotos = [
     'before': 'beforeBathroom29.jpeg'
   },
   {
-    'category': 'Indoors',
-    'after': 'afterIndoors9.jpeg',
-    'before': 'beforeIndoors9.jpeg'
-  },
-  {
     'category': 'Bathroom',
     'after': 'afterBathroom9.jpeg',
     'before': 'beforeBathroom9.jpeg'
