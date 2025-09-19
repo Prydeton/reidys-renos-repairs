@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface ContainerProps {
-  position: string
+	position: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -23,16 +23,18 @@ export const ImageContainer = styled.div`
   aspect-ratio: 1/1;
   max-width: 500px;
   max-height: 500px;
+  position: relative;
 
   img {
     object-fit: cover;
-    object-position: left;
+    width: 100%;
+    height: 100%;
   }
   
   img:nth-of-type(1) {
     position: absolute;
     inset: 0;
-    width: var(--position);
+    clip-path: inset(0 calc(100% - var(--position)) 0 0);
   }
 `
 
