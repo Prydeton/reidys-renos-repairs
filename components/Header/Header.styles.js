@@ -30,7 +30,11 @@ export const BannerContainer = styled.div`
     padding: 1em;
 
     img {
-      height: 120px;
+      max-height: 170px;
+      height: auto;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
     }
   }
 
@@ -90,6 +94,7 @@ export const NavItem = styled.a`
   font-size: 1.2em;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
 
   &.active, &:hover {
     color: var(--brand-orange);
