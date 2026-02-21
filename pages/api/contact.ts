@@ -31,7 +31,7 @@ export default async function handler(
     return res.status(405).json({ success: false, error: 'Method not allowed' })
   }
 
-  const { name, phone, email, subject, message, recaptcha_token } = req.body as ContactApiRequestBody
+  const { name, phone, email, subject, message, suburb, recaptcha_token } = req.body as ContactApiRequestBody
 
   if (!name || !phone || !email || !subject || !message) {
     return res.status(400).json({ success: false, error: 'Missing required fields' })
@@ -67,6 +67,7 @@ export default async function handler(
 			<p><strong>Name:</strong> ${String(name)}</p>
 			<p><strong>Email:</strong> ${String(email)}</p>
 			<p><strong>Phone:</strong> ${String(phone)}</p>
+			${suburb ? `<p><strong>Suburb:</strong> ${String(suburb)}</p>` : ''}
 			<p><strong>Subject:</strong> ${String(subject)}</p>
 			<p><strong>Message:</strong></p>
 			<pre style="white-space:pre-wrap;font-family:inherit">${String(message)}</pre>

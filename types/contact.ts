@@ -7,6 +7,7 @@ export interface ContactFormData {
   email: string
   subject: string
   message: string
+  suburb?: string
 }
 
 export interface ContactApiRequestBody extends ContactFormData {

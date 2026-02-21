@@ -16,7 +16,8 @@ interface ContactFormProps {
   phone: string,
   email: string,
   subject: string,
-  message: string
+  message: string,
+  suburb?: string
 }
 
 const Contact = () => {
@@ -109,13 +110,20 @@ const Contact = () => {
                 {...register('phone', { required: 'Phone number is required' })}
               />
             </div>
-            <TextField
-              required
-              type={'email'}
-              id="email"
-              label="Email"
-              {...register('email', { required: 'Email is required' })}
-            />
+            <div>
+              <TextField
+                required
+                type={'email'}
+                id="email"
+                label="Email"
+                {...register('email', { required: 'Email is required' })}
+              />
+              <TextField
+                id="suburb"
+                label="Suburb"
+                {...register('suburb')}
+              />
+            </div>
             <TextField
               required
               id="subject"
