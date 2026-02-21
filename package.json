@@ -19,7 +19,7 @@
     "eslint": "8.31.0",
     "eslint-config-next": "^15.0.0",
     "lucide-react": "^0.105.0-alpha.4",
-    "next": "^15.5.3",
+    "next": "15.5.9",
     "react": "^19.1.1",
     "react-before-after-slider-component": "^1.1.6",
     "react-dom": "^19.1.1",
